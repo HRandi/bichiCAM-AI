@@ -3,7 +3,7 @@
 
 import tensorflow as tf
 
-import system.core.common as common
+from . import common
 
 
 def darknet53(input_data):

@@ -15,10 +15,10 @@ if len(physical_devices) > 0:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
 from absl import app, flags
 from absl.flags import FLAGS
-import system.core.utils as utils
-from system.core.yolov4 import filter_boxes
+import core.utils as utils
+from core.yolov4 import filter_boxes
 from tensorflow.python.saved_model import tag_constants
-from system.core.config import cfg
+from core.config import cfg
 from PIL import Image
 import cv2
 import numpy as np
@@ -28,10 +28,10 @@ from tensorflow.compat.v1 import ConfigProto
 # noinspection PyUnresolvedReferences
 from tensorflow.compat.v1 import InteractiveSession
 # deep sort imports
-from system.deep_sort import preprocessing, nn_matching
-from system.deep_sort.detection import Detection
-from system.deep_sort.tracker import Tracker
-from system.tools import generate_detections as gdet
+from deep_sort import preprocessing, nn_matching
+from deep_sort.detection import Detection
+from deep_sort.tracker import Tracker
+from tools import generate_detections as gdet
 
 st = datetime.datetime.now()
 time_start = str(st.hour) + ':' + str(st.minute) + ':' + str(st.second)
@@ -58,7 +58,7 @@ def main(_argv):
     nms_max_overlap = 2.0
 
     # initialiser le tri approfondi (deep sort)
-    model_filename = 'system/model_data/mars-small128.pb'
+    model_filename = './system/model_data/mars-small128.pb'
     encoder = gdet.create_box_encoder(model_filename, batch_size=1)
     # calculer la métrique de distance cosinus
     metric = nn_matching.NearestNeighborDistanceMetric("cosine", max_cosine_distance, nn_budget)

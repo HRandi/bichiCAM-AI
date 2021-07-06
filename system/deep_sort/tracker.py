@@ -3,10 +3,10 @@ from __future__ import absolute_import
 
 import numpy as np
 
-from system.deep_sort import iou_matching
-from system.deep_sort import kalman_filter
-from system.deep_sort import linear_assignment
-from system.deep_sort.track import Track
+from . import iou_matching
+from . import kalman_filter
+from . import linear_assignment
+from .track import Track
 
 
 class Tracker:

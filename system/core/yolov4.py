@@ -4,9 +4,9 @@
 import numpy as np
 import tensorflow as tf
 
-import system.core.backbone as backbone
-import system.core.common as common
-import system.core.utils as utils
+from . import backbone
+from . import common
+from . import utils
 
 
 # NUM_CLASS       = len(utils.read_class_names(cfg.YOLO.CLASSES))

@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-from system.core.config import cfg
+from .config import cfg
 
 
 def load_freeze_layer(model='yolov4', tiny=False):

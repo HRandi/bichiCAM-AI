@@ -2,8 +2,8 @@ import tensorflow as tf
 from absl import app, flags
 from absl.flags import FLAGS
 
-import system.core.utils as utils
-from system.core.yolov4 import YOLO, decode, filter_boxes
+import core.utils as utils
+from core.yolov4 import YOLO, decode, filter_boxes
 
 flags.DEFINE_string('weights', './system/data/mr_sic_ind.weights', 'path to weights file')
 flags.DEFINE_string('output', './system/lib/mr_sic_ind', 'path to output')
