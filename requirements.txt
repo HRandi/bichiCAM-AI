@@ -1,0 +1,12 @@
+tensorflow-gpu==2.3.0rc0
+opencv-python==4.1.2.30
+lxml
+tqdm
+absl-py
+matplotlib~=3.3.4
+easydict~=1.9
+pillow~=8.1.0
+numpy~=1.18.5
+scipy~=1.4.1
+goprocam~=4.1.0
+pandas~=1.2.3
